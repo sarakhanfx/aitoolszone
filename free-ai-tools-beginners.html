@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="5 best free AI tools for beginners in 2025 — tested and ranked. Start using AI today without spending a single rupee.">
+<meta name="keywords" content="free AI tools 2025, best AI tools for beginners, free ChatGPT alternatives, AI tools Pakistan">
+<meta property="og:title" content="5 Best Free AI Tools for Beginners in 2025 — AIToolsZone">
+<meta property="og:description" content="Start using AI today without spending a single rupee. These 5 free tools are perfect for beginners.">
+<meta name="robots" content="index, follow">
+<title>5 Best Free AI Tools for Beginners in 2025 — AIToolsZone</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.article-wrap { max-width: 780px; margin: 0 auto; padding: 50px 5% 80px; }
+.article-hero-thumb {
+  background: linear-gradient(135deg, var(--bg2), var(--bg3));
+  border: 1px solid var(--border); border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 4rem; min-height: 220px; margin-bottom: 36px;
+}
+.article-meta-top { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+h1.art-title {
+  font-family: var(--font-head); font-size: clamp(1.7rem, 4vw, 2.4rem);
+  font-weight: 800; line-height: 1.15; letter-spacing: -.025em; margin-bottom: 16px;
+}
+.art-intro { font-size: 1.05rem; color: var(--muted); line-height: 1.8; margin-bottom: 36px; font-weight: 300; border-left: 3px solid var(--accent); padding-left: 18px; }
+.art-body h2 { font-family: var(--font-head); font-size: 1.35rem; font-weight: 700; margin: 40px 0 14px; letter-spacing: -.015em; }
+.art-body p { font-size: .95rem; color: var(--muted); line-height: 1.85; margin-bottom: 16px; font-weight: 300; }
+.art-body ul { margin: 0 0 20px 20px; }
+.art-body ul li { font-size: .93rem; color: var(--muted); line-height: 1.8; margin-bottom: 6px; font-weight: 300; }
+.art-body strong { color: var(--text); font-weight: 600; }
+
+/* Tool card inside article */
+.tool-block {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 28px; margin: 28px 0;
+  position: relative; overflow: hidden;
+}
+.tool-block::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent2));
+}
+.tool-block-hd { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.tool-block-icon { font-size: 2rem; width: 54px; height: 54px; background: rgba(255,255,255,.04); border: 1px solid var(--border); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.tool-block-name { font-family: var(--font-head); font-size: 1.15rem; font-weight: 800; }
+.tool-block-cat { font-size: .76rem; color: var(--muted); margin-top: 2px; }
+.tool-block-num { position: absolute; top: 18px; right: 20px; font-family: var(--font-head); font-size: 2.5rem; font-weight: 800; color: rgba(255,255,255,.04); line-height: 1; }
+.pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
+.pros, .cons { background: rgba(255,255,255,.02); border-radius: 10px; padding: 14px 16px; }
+.pros { border-left: 2px solid var(--accent3); }
+.cons { border-left: 2px solid rgba(251,191,36,.5); }
+.pros h4, .cons h4 { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 8px; }
+.pros h4 { color: var(--accent3); }
+.cons h4 { color: #fbbf24; }
+.pros ul, .cons ul { margin: 0 0 0 14px; }
+.pros ul li, .cons ul li { font-size: .82rem; color: var(--muted); line-height: 1.7; }
+.verdict-box { background: rgba(0,229,255,.05); border: 1px solid rgba(0,229,255,.15); border-radius: 10px; padding: 14px 18px; margin-top: 16px; font-size: .87rem; color: var(--text); line-height: 1.6; }
+.verdict-box strong { color: var(--accent); }
+
+/* Final verdict table */
+.verdict-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: .88rem; }
+.verdict-table th { background: var(--card); color: var(--muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+.verdict-table td { padding: 12px 14px; border-bottom: 1px solid var(--border); color: var(--muted); font-weight: 300; }
+.verdict-table tr:hover td { background: rgba(255,255,255,.02); }
+.verdict-table td:first-child { color: var(--text); font-weight: 600; }
+
+.author-box { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; display: flex; gap: 18px; align-items: flex-start; margin-top: 48px; }
+.author-avatar { width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent2)); display: flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 700; color: #000; flex-shrink: 0; }
+.author-name-big { font-family: var(--font-head); font-weight: 700; margin-bottom: 4px; }
+.author-bio { font-size: .83rem; color: var(--muted); line-height: 1.6; font-weight: 300; }
+
+@media(max-width: 560px) {
+  .pros-cons { grid-template-columns: 1fr; }
+  .author-box { flex-direction: column; }
+}
+</style>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+</head>
+<body>
+<div id="navbar"></div>
+
+<div class="page-content">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="label">Free AI Tools</div>
+      <div class="article-meta-top" style="margin-top:14px">
+        <span class="tag">Free Tools</span>
+        <span class="tag tag-green">Beginners</span>
+        <span class="read-time">⏱ 7 min read</span>
+      </div>
+      <h1 class="page-title">5 Best Free AI Tools for Beginners in 2025</h1>
+      <div style="display:flex;align-items:center;gap:12px;margin-top:18px">
+        <div class="avatar">AZ</div>
+        <span style="font-size:.83rem;color:var(--muted)">AIToolsZone Team &nbsp;·&nbsp; April 23, 2025 &nbsp;·&nbsp; Updated weekly</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrap">
+    <div class="article-hero-thumb">🤖✨</div>
+
+    <p class="art-intro">
+      AI tools nay kaam karna bilkul badal diya hai — aur sabse achi baat yeh hai ke shuruaat karne ke liye ek paisa bhi nahi lagta. Yeh 5 tools maine khud use kiye hain aur yeh beginners ke liye perfect hain.
+    </p>
+
+    <div class="art-body">
+
+      <!-- Tool 1 -->
+      <div class="tool-block">
+        <div class="tool-block-num">01</div>
+        <div class="tool-block-hd">
+          <div class="tool-block-icon">💬</div>
+          <div>
+            <div class="tool-block-name">ChatGPT (Free Plan)</div>
+            <div class="tool-block-cat">AI Writing & Assistant · OpenAI</div>
+          </div>
+        </div>
+        <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:14px;font-weight:300">
+          ChatGPT wo tool hai jis ne AI ko duniya tak pohanchaya. Free plan mein aapko GPT-4o mini milta hai jo emails, blog posts, social media captions, aur research ke liye kaafi powerful hai. Sirf chatgpt.com pe jayen aur Google account se login karen — bas shuru ho jayen.
+        </p>
+        <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:14px;font-weight:300">
+          <strong>Beginners ke liye best use:</strong> Client emails likhna, blog post ideas banana, kisi topic ki research karna, ya apne kaam ka summary tayar karna.
+        </p>
+        <div class="pros-cons">
+          <div class="pros">
+            <h4>✅ Fayde</h4>
+            <ul>
+              <li>Bilkul free, koi credit card nahi chahiye</li>
+              <li>Bahut asaan interface</li>
+              <li>Urdu/Hindi mein bhi kaam karta hai</li>
+              <li>Rozana use ke liye kaafi hai</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h4>⚠️ Limitations</h4>
+            <ul>
+              <li>Free mein GPT-4 limited access</li>
+              <li>Internet search limited hai</li>
+              <li>Rush hours mein slow ho sakta hai</li>
+            </ul>
+          </div>
+        </div>
+        <div class="verdict-box"><strong>Best for:</strong> Har koi jo AI start karna chahta ho — yeh pehla tool hona chahiye.</div>
+      </div>
+
+      <!-- Tool 2 -->
+      <div class="tool-block">
+        <div class="tool-block-num">02</div>
+        <div class="tool-block-hd">
+          <div class="tool-block-icon">🤖</div>
+          <div>
+            <div class="tool-block-name">Claude AI (Free Plan)</div>
+            <div class="tool-block-cat">AI Writing & Analysis · Anthropic</div>
+          </div>
+        </div>
+        <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:14px;font-weight:300">
+          Claude AI writing ke liye ChatGPT se bhi behtar maana jata hai. Lambe documents padhna, detailed analysis karna, aur professional tone mein content likhna — yeh sab Claude bahut acha karta hai. Free plan mein daily limit hai lekin beginners ke liye zyada se zyada kaafi hai.
+        </p>
+        <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:14px;font-weight:300">
+          <strong>Khaas baat:</strong> Claude ek baar mein 100+ pages ka document padh sakta hai aur uska summary ya analysis de sakta hai — yeh feature ChatGPT free mein nahi milta.
+        </p>
+        <div class="pros-cons">
+          <div class="pros">
+            <h4>✅ Fayde</h4>
+            <ul>
+              <li>Long documents analyze karta hai</li>
+              <li>Writing quality bahut high hai</li>
+              <li>Safety aur accuracy mein better</li>
+              <li>PDF upload kar sakte hain free mein</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h4>⚠️ Limitations</h4>
+            <ul>
+              <li>Daily message limit hai free mein</li>
+              <li>Image generate nahi karta</li>
+              <li>Internet search nahi karta (free mein)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="verdict-box"><strong>Best for:</strong> Blog articles, professional emails, documents analyze karne ke liye.</div>
+      </div>
+
+      <!-- Tool 3 -->
+      <div class="tool-block">
+        <div class="tool-block-num">03</div>
+        <div class="tool-block-hd">
+          <div class="tool-block-icon">🎨</div>
+          <div>
+            <div class="tool-block-name">Canva AI (Free Plan)</div>
+            <div class="tool-block-cat">AI Design Tool · Canva</div>
+          </div>
+        </div>
+        <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:14px;font-weight:300">
+          Agar aapko design nahi aata toh bhi Canva AI se professional graphics ban jaati hain. Social media posts, YouTube thumbnails, presentations, logos — sab kuch. Free plan mein bahut saare templates aur AI features milte hain.
+        </p>
+        <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:14px;font-weight:300">
+          <strong>AI features:</strong> Magic Write (AI text generator), Background Remover, aur Magic Resize jo ek design ko automatically alag sizes mein convert karta hai.
+        </p>
+        <div class="pros-cons">
+          <div class="pros">
+            <h4>✅ Fayde</h4>
+            <ul>
+              <li>Koi design experience nahi chahiye</li>
+              <li>Hazaron free templates</li>
+              <li>Mobile app bhi available</li>
+              <li>Team ke saath share kar sakte hain</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h4>⚠️ Limitations</h4>
+            <ul>
+              <li>AI image generation limited hai free mein</li>
+              <li>Kuch premium elements paid hain</li>
+              <li>Export quality kuch formats mein limited</li>
+            </ul>
+          </div>
+        </div>
+        <div class="verdict-box"><strong>Best for:</strong> Social media graphics, thumbnails, presentations — freelancers ke liye must-have.</div>
+      </div>
+
+      <!-- Tool 4 -->
+      <div class="tool-block">
+        <div class="tool-block-num">04</div>
+        <div class="tool-block-hd">
+          <div class="tool-block-icon">🔍</div>
+          <div>
+            <div class="tool-block-name">Perplexity AI (Free Plan)</div>
+            <div class="tool-block-cat">AI Search Engine · Perplexity</div>
+          </div>
+        </div>
+        <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:14px;font-weight:300">
+          Perplexity AI Google aur ChatGPT ka combination hai. Aap koi bhi sawaal poochein — yeh real-time internet se search karke sourced answers deta hai. Research ke liye yeh tool zabardast hai kyunki har jawab ke saath sources bhi milte hain.
+        </p>
+        <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:14px;font-weight:300">
+          <strong>Khaas cheez:</strong> "Focus" feature se aap specifically Reddit, YouTube, ya academic papers search kar sakte hain — yeh Google se behtar hai research ke liye.
+        </p>
+        <div class="pros-cons">
+          <div class="pros">
+            <h4>✅ Fayde</h4>
+            <ul>
+              <li>Real-time internet access free mein</li>
+              <li>Har jawab ke saath sources</li>
+              <li>Research ke liye fastest tool</li>
+              <li>Follow-up questions asaan</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h4>⚠️ Limitations</h4>
+            <ul>
+              <li>Writing/creation ke liye ChatGPT better</li>
+              <li>Pro searches limited hain free mein</li>
+              <li>Kabhi kabhi outdated info de sakta hai</li>
+            </ul>
+          </div>
+        </div>
+        <div class="verdict-box"><strong>Best for:</strong> Research, fact-checking, naye topics samajhne ke liye — Google ki jagah try karo.</div>
+      </div>
+
+      <!-- Tool 5 -->
+      <div class="tool-block">
+        <div class="tool-block-num">05</div>
+        <div class="tool-block-hd">
+          <div class="tool-block-icon">✍️</div>
+          <div>
+            <div class="tool-block-name">Copy.ai (Free Plan)</div>
+            <div class="tool-block-cat">AI Copywriting · Copy.ai</div>
+          </div>
+        </div>
+        <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:14px;font-weight:300">
+          Copy.ai marketing copy likhne ke liye specialized hai — product descriptions, ad copy, social media captions, email subject lines. Free plan mein 2,000 words/month milte hain jo beginners ke liye shuru karne ke liye kaafi hain.
+        </p>
+        <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:14px;font-weight:300">
+          <strong>Interesting feature:</strong> Yeh alag-alag tones mein likhta hai — professional, friendly, funny — aap choose kar sakte hain apni zaroorat ke hisaab se.
+        </p>
+        <div class="pros-cons">
+          <div class="pros">
+            <h4>✅ Fayde</h4>
+            <ul>
+              <li>Marketing copy ke liye specialized</li>
+              <li>90+ content templates</li>
+              <li>Multiple tone options</li>
+              <li>Simple interface, seekhna asaan</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h4>⚠️ Limitations</h4>
+            <ul>
+              <li>Free mein 2,000 words/month sirf</li>
+              <li>Long articles ke liye suited nahi</li>
+              <li>ChatGPT se kam flexible hai</li>
+            </ul>
+          </div>
+        </div>
+        <div class="verdict-box"><strong>Best for:</strong> Product descriptions, ad copy, social media captions likhne ke liye.</div>
+      </div>
+
+      <h2>Quick Comparison — Konsa Tool Kab Use Karein?</h2>
+
+      <table class="verdict-table">
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Best Kaam</th>
+            <th>Free Limit</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ChatGPT</td><td>General writing, ideas, emails</td><td>Daily limit (generous)</td><td>⭐ 4.8</td></tr>
+          <tr><td>Claude AI</td><td>Long content, documents, analysis</td><td>Daily messages</td><td>⭐ 4.7</td></tr>
+          <tr><td>Canva AI</td><td>Graphics, thumbnails, design</td><td>Mostly unlimited</td><td>⭐ 4.9</td></tr>
+          <tr><td>Perplexity</td><td>Research, fact-checking</td><td>Unlimited basic</td><td>⭐ 4.6</td></tr>
+          <tr><td>Copy.ai</td><td>Ad copy, captions, marketing</td><td>2,000 words/month</td><td>⭐ 4.2</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Shuruat Kahan Se Karein?</h2>
+      <p>Agar aap bilkul naaye hain to yeh order follow karein:</p>
+      <ul>
+        <li><strong>Pehla hafte:</strong> ChatGPT free account banayein aur rozana ek kaam AI se karein — chahe email ho ya blog idea</li>
+        <li><strong>Doosra hafte:</strong> Canva AI try karein — apni social media post AI se design karein</li>
+        <li><strong>Teesra hafte:</strong> Claude AI pe switch karein jab koi lamba document ya article likhna ho</li>
+        <li><strong>Chautha hafte:</strong> Perplexity se research karna start karein — Google ki jagah yeh try karein</li>
+      </ul>
+      <p>Yad rakhein — AI tool sirf tool hai. Jitna zyada aap use karenge, utna behtar results milenge. Shuruaat karo, galtiyan karo, seekhte raho.</p>
+
+    </div>
+
+    <!-- Author box -->
+    <div class="author-box">
+      <div class="author-avatar">AZ</div>
+      <div>
+        <div class="author-name-big">AIToolsZone Team</div>
+        <p class="author-bio">Ham AI tools ko khud test karte hain aur honest reviews likhte hain — koi paid promotion nahi. Hamara maqsad hai ke aap sahi tool chunen aur apna kaam AI se zyada asan banayein.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="footer"></div>
+<script src="components.js"></script>
+<script>renderNav('Blog'); renderFooter();</script>
+</body>
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AIToolsZone — Discover the best AI tools for creators and online earners. Honest reviews, tutorials, comparisons and earning strategies. Updated weekly.">
+<meta name="keywords" content="best AI tools 2025, AI tools for freelancers, ChatGPT alternatives, Jasper AI review, make money with AI">
+<meta property="og:title" content="AIToolsZone — Discover & Master the Best AI Tools">
+<meta property="og:description" content="Expert AI tool reviews, tutorials and real earning strategies for digital creators.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<title>AIToolsZone — Discover & Master the Best AI Tools (2025)</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* ── HOME-ONLY STYLES ── */
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 5%;
+  position: relative;
+  overflow: hidden;
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(0,229,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,229,255,.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 100%);
+}
+.hero-glow {
+  position: absolute; top: 15%; left: 50%;
+  transform: translateX(-50%);
+  width: 700px; height: 500px;
+  background: radial-gradient(ellipse, rgba(0,229,255,.07) 0%, rgba(124,58,237,.04) 50%, transparent 70%);
+  pointer-events: none;
+}
+.hero-inner { position: relative; z-index: 1; max-width: 840px; }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,229,255,.08); border: 1px solid rgba(0,229,255,.2);
+  color: var(--accent); padding: 6px 18px; border-radius: 100px;
+  font-size: .75rem; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; margin-bottom: 28px;
+  animation: fadeDown .6s ease both;
+}
+.hero-badge::before {
+  content: ''; width: 6px; height: 6px;
+  background: var(--accent); border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent);
+}
+
+.hero h1 {
+  font-family: var(--font-head);
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  font-weight: 800; line-height: 1.08;
+  letter-spacing: -.025em; margin-bottom: 24px;
+  animation: fadeDown .6s .1s ease both;
+}
+.hero h1 .gradient {
+  background: linear-gradient(130deg, var(--accent) 0%, #7c3aed 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-sub {
+  font-size: clamp(.98rem, 2vw, 1.18rem);
+  color: var(--muted); max-width: 560px; margin: 0 auto 40px;
+  line-height: 1.75; font-weight: 300;
+  animation: fadeDown .6s .2s ease both;
+}
+
+.hero-btns {
+  display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
+  animation: fadeDown .6s .3s ease both;
+}
+
+.hero-stats {
+  display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
+  margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border);
+  animation: fadeDown .6s .4s ease both;
+}
+.stat-num {
+  font-family: var(--font-head); font-size: 1.9rem; font-weight: 800;
+}
+.stat-num span { color: var(--accent); }
+.stat-lbl { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; margin-top: 2px; }
+
+@keyframes fadeDown {
+  from { opacity:0; transform:translateY(-14px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+/* SECTIONS */
+section.home-section { position: relative; z-index: 1; padding: 80px 5%; }
+section.bg-alt { background: var(--bg2); }
+
+/* CATEGORIES */
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.cat-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 14px; padding: 22px 18px;
+  text-decoration: none; text-align: center;
+  transition: all .25s; color: var(--text);
+}
+.cat-card:hover {
+  border-color: rgba(0,229,255,.28);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 32px rgba(0,0,0,.3);
+}
+.cat-icon { font-size: 1.8rem; margin-bottom: 10px; display: block; }
+.cat-name { font-family: var(--font-head); font-size: .84rem; font-weight: 700; margin-bottom: 3px; }
+.cat-count { font-size: .72rem; color: var(--muted); }
+
+/* FEATURED ARTICLES GRID */
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 22px;
+}
+.articles-side { display: flex; flex-direction: column; gap: 14px; }
+
+.article-card.hero-card .article-thumb { min-height: 200px; font-size: 3.5rem; }
+.article-card.hero-card .article-title { font-size: 1.4rem; }
+.article-card.hero-card .article-excerpt { display: block; }
+
+.article-card.sm-card { flex-direction: row; }
+.article-card.sm-card .article-thumb { width: 100px; min-height: 100%; font-size: 1.8rem; }
+.article-card.sm-card .article-body { padding: 14px; }
+.article-card.sm-card .article-excerpt { display: none; }
+
+/* TOOL CARDS */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+  gap: 18px;
+}
+.tool-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 26px;
+  text-decoration: none; color: var(--text);
+  display: flex; flex-direction: column; gap: 14px;
+  transition: all .25s; position: relative; overflow: hidden;
+}
+.tool-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent2));
+  opacity: 0; transition: opacity .25s;
+}
+.tool-card:hover { border-color: rgba(0,229,255,.2); transform: translateY(-4px); box-shadow: 0 14px 44px rgba(0,0,0,.38); }
+.tool-card:hover::before { opacity: 1; }
+.tool-hd { display: flex; align-items: center; justify-content: space-between; }
+.tool-icon {
+  width: 48px; height: 48px; border-radius: 12px;
+  background: rgba(255,255,255,.04); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center; font-size: 1.4rem;
+}
+.tool-rating { font-size: .8rem; font-weight: 700; color: #fbbf24; }
+.tool-name { font-family: var(--font-head); font-size: 1rem; font-weight: 700; }
+.tool-cat-lbl { font-size: .74rem; color: var(--muted); margin-top: 2px; }
+.tool-desc { font-size: .83rem; color: var(--muted); line-height: 1.6; font-weight: 300; }
+.tool-tags-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tool-tag { background: rgba(255,255,255,.04); border: 1px solid var(--border); color: var(--muted); padding: 3px 8px; border-radius: 4px; font-size: .68rem; }
+.tool-ft { display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--border); flex-wrap: wrap; gap: 8px; }
+.tool-price { font-size: .78rem; color: var(--accent3); font-weight: 700; }
+
+/* EARNING CARDS */
+.earn-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+}
+.earn-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 26px; transition: all .25s;
+}
+.earn-card:hover { border-color: rgba(0,229,255,.18); transform: translateY(-4px); }
+.earn-icon { font-size: 2rem; margin-bottom: 14px; display: block; }
+.earn-title { font-family: var(--font-head); font-size: .98rem; font-weight: 700; margin-bottom: 8px; }
+.earn-desc { font-size: .83rem; color: var(--muted); line-height: 1.65; font-weight: 300; }
+
+/* NEWSLETTER */
+.newsletter {
+  background: var(--bg3); border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 80px 5%; text-align: center;
+  position: relative; z-index: 1;
+}
+.nl-icon { font-size: 2.4rem; margin-bottom: 18px; display: block; }
+.newsletter h2 {
+  font-family: var(--font-head); font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700; margin-bottom: 10px;
+}
+.newsletter p { color: var(--muted); font-size: .92rem; margin-bottom: 28px; font-weight: 300; }
+.nl-form { display: flex; gap: 10px; max-width: 430px; margin: 0 auto; }
+.nl-form input {
+  flex: 1; background: var(--card); border: 1px solid var(--border);
+  color: var(--text); padding: 11px 16px; border-radius: 8px;
+  font-size: .88rem; font-family: var(--font-body); outline: none;
+  transition: border-color .2s;
+}
+.nl-form input:focus { border-color: rgba(0,229,255,.38); }
+.nl-form input::placeholder { color: var(--muted); }
+.nl-form button {
+  background: var(--accent); color: #000; border: none;
+  padding: 11px 22px; border-radius: 8px; font-weight: 700;
+  font-size: .88rem; cursor: pointer; font-family: var(--font-body);
+  transition: all .2s; white-space: nowrap;
+}
+.nl-form button:hover { background: #fff; transform: translateY(-1px); }
+
+@media (max-width: 900px) {
+  .featured-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .cat-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .hero-stats { gap: 24px; }
+  .nl-form { flex-direction: column; }
+  .cat-grid { grid-template-columns: repeat(2, 1fr); }
+  .article-card.sm-card { flex-direction: column; }
+  .article-card.sm-card .article-thumb { width: 100%; min-height: 100px; }
+}
+@media (min-width: 1400px) {
+  .cat-grid { max-width: 1000px; }
+}
+</style>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+</head>
+<body>
+
+<!-- NAVBAR (injected by components.js) -->
+<div id="navbar"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">✦ 100+ AI Tools Reviewed — Updated Weekly</div>
+    <h1>Discover & Master<br>the Best <span class="gradient">AI Tools</span><br>for Online Earners</h1>
+    <p class="hero-sub">Honest reviews, step-by-step tutorials, and real earning strategies for creators and freelancers who want to work smarter with AI.</p>
+    <div class="hero-btns">
+      <a href="blog.html" class="btn btn-primary">Explore Articles →</a>
+      <a href="resources.html" class="btn btn-outline">🔥 Top AI Tools</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">100<span>+</span></div>
+        <div class="stat-lbl">Tools Reviewed</div>
+      </div>
+      <div>
+        <div class="stat-num">50<span>+</span></div>
+        <div class="stat-lbl">In-Depth Guides</div>
+      </div>
+      <div>
+        <div class="stat-num">8<span>+</span></div>
+        <div class="stat-lbl">Categories</div>
+      </div>
+      <div>
+        <div class="stat-num">Free<span>*</span></div>
+        <div class="stat-lbl">Always Free to Read</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="home-section bg-alt" id="categories">
+  <div class="section-header reveal">
+    <div>
+      <div class="label">Browse by Topic</div>
+      <h2 class="section-title">All AI Tool Categories</h2>
+      <p class="section-sub">Find the right AI tool by your exact need — writing, design, video, productivity and more.</p>
+    </div>
+  </div>
+  <div class="cat-grid reveal">
+    <a href="blog.html" class="cat-card"><span class="cat-icon">✍️</span><div class="cat-name">AI Writing</div><div class="cat-count">24 articles</div></a>
+    <a href="blog.html" class="cat-card"><span class="cat-icon">🎨</span><div class="cat-name">AI Image</div><div class="cat-count">18 articles</div></a>
+    <a href="blog.html" class="cat-card"><span class="cat-icon">🎬</span><div class="cat-name">AI Video</div><div class="cat-count">12 articles</div></a>
+    <a href="blog.html" class="cat-card"><span class="cat-icon">📈</span><div class="cat-name">AI Marketing</div><div class="cat-count">16 articles</div></a>
+    <a href="blog.html" class="cat-card"><span class="cat-icon">⚡</span><div class="cat-name">Productivity</div><div class="cat-count">20 articles</div></a>
+    <a href="blog.html" class="cat-card"><span class="cat-icon">💰</span><div class="cat-name">Earn with AI</div><div class="cat-count">14 articles</div></a>
+    <a href="blog.html" class="cat-card"><span class="cat-icon">🆚</span><div class="cat-name">Comparisons</div><div class="cat-count">22 articles</div></a>
+    <a href="blog.html" class="cat-card"><span class="cat-icon">🆓</span><div class="cat-name">Free AI Tools</div><div class="cat-count">30 articles</div></a>
+  </div>
+</section>
+
+<!-- FEATURED ARTICLES -->
+<section class="home-section">
+  <div class="section-header reveal">
+    <div>
+      <div class="label">Latest & Greatest</div>
+      <h2 class="section-title">Featured Articles</h2>
+      <p class="section-sub">Hand-picked guides to help you get real results with AI tools.</p>
+    </div>
+    <a href="blog.html" class="view-all">View All Articles →</a>
+  </div>
+  <div class="featured-grid reveal">
+    <a href="best-ai-writing-tools.html" class="article-card hero-card">
+      <div class="article-thumb">🤖</div>
+      <div class="article-body">
+        <div class="article-meta">
+          <span class="tag">AI Writing</span>
+          <span class="read-time">⏱ 8 min read</span>
+        </div>
+        <div class="article-title">7 Best AI Writing Tools for Freelancers in 2025 (Free & Paid)</div>
+        <p class="article-excerpt">Tired of spending hours writing content? These AI tools will help you produce high-quality blog posts, emails, and social media content in minutes — not hours.</p>
+        <div class="article-footer">
+          <div class="author"><div class="avatar">AZ</div><span class="author-name">AIToolsZone Team</span></div>
+          <span class="date">Jan 15, 2025</span>
+        </div>
+      </div>
+    </a>
+    <div class="articles-side">
+      <a href="free-ai-image-generators.html" class="article-card sm-card">
+        <div class="article-thumb">🎨</div>
+        <div class="article-body">
+          <div class="article-meta"><span class="tag tag-purple">AI Image</span></div>
+          <div class="article-title">Best Free AI Image Generators 2025</div>
+          <div class="article-footer">
+            <div class="author"><div class="avatar">AZ</div><span class="author-name">AIToolsZone</span></div>
+            <span class="date">Jan 12</span>
+          </div>
+        </div>
+      </a>
+      <a href="writesonic-vs-jasper.html" class="article-card sm-card">
+        <div class="article-thumb">⚔️</div>
+        <div class="article-body">
+          <div class="article-meta"><span class="tag">Comparison</span></div>
+          <div class="article-title">Writesonic vs Jasper: Which is Better?</div>
+          <div class="article-footer">
+            <div class="author"><div class="avatar">AZ</div><span class="author-name">AIToolsZone</span></div>
+            <span class="date">Jan 10</span>
+          </div>
+        </div>
+      </a>
+      <a href="earn-with-claude-ai.html" class="article-card sm-card">
+        <div class="article-thumb">💰</div>
+        <div class="article-body">
+          <div class="article-meta"><span class="tag tag-green">Earn with AI</span></div>
+          <div class="article-title">How to Make $500/Month with AI Tools</div>
+          <div class="article-footer">
+            <div class="author"><div class="avatar">AZ</div><span class="author-name">AIToolsZone</span></div>
+            <span class="date">Jan 8</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TOP TOOLS -->
+<section class="home-section bg-alt">
+  <div class="section-header reveal">
+    <div>
+      <div class="label">Editor's Picks</div>
+      <h2 class="section-title">Top Rated AI Tools</h2>
+      <p class="section-sub">The best AI tools we've personally tested and recommend to creators.</p>
+    </div>
+    <a href="resources.html" class="view-all">See All Tools →</a>
+  </div>
+  <div class="tools-grid reveal">
+    <a href="resources.html" class="tool-card">
+      <div class="tool-hd"><div class="tool-icon">✍️</div><div class="tool-rating">★ 4.8</div></div>
+      <div><div class="tool-name">Jasper AI</div><div class="tool-cat-lbl">AI Writing Tool</div></div>
+      <p class="tool-desc">The most powerful AI writer for blogs, ads, and emails. Trusted by 100,000+ marketers globally.</p>
+      <div class="tool-tags-row"><span class="tool-tag">Blog Posts</span><span class="tool-tag">Ad Copy</span><span class="tool-tag">SEO</span></div>
+      <div class="tool-ft"><span class="tool-price">Free Trial Available</span><span class="btn btn-accent" style="padding:6px 14px;font-size:.78rem">Read Review</span></div>
+    </a>
+    <a href="resources.html" class="tool-card">
+      <div class="tool-hd"><div class="tool-icon">🎨</div><div class="tool-rating">★ 4.9</div></div>
+      <div><div class="tool-name">Canva AI</div><div class="tool-cat-lbl">AI Design Tool</div></div>
+      <p class="tool-desc">Create stunning social media posts and presentations with AI-powered design. Free plan available.</p>
+      <div class="tool-tags-row"><span class="tool-tag">Design</span><span class="tool-tag">Social Media</span><span class="tool-tag">Free Plan</span></div>
+      <div class="tool-ft"><span class="tool-price">Free Forever Plan</span><span class="btn btn-accent" style="padding:6px 14px;font-size:.78rem">Read Review</span></div>
+    </a>
+    <a href="resources.html" class="tool-card">
+      <div class="tool-hd"><div class="tool-icon">💬</div><div class="tool-rating">★ 4.7</div></div>
+      <div><div class="tool-name">ChatGPT</div><div class="tool-cat-lbl">AI Assistant</div></div>
+      <p class="tool-desc">The world's most versatile AI tool. Write, code, research — free basic plan is genuinely powerful.</p>
+      <div class="tool-tags-row"><span class="tool-tag">Writing</span><span class="tool-tag">Coding</span><span class="tool-tag">Research</span></div>
+      <div class="tool-ft"><span class="tool-price">Free + $20/mo Pro</span><span class="btn btn-accent" style="padding:6px 14px;font-size:.78rem">Read Review</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- EARN WITH AI -->
+<section class="home-section">
+  <div class="section-header reveal">
+    <div>
+      <div class="label">Make Money Online</div>
+      <h2 class="section-title">Ways to Earn with AI</h2>
+      <p class="section-sub">Real strategies that creators use to earn consistent income with AI tools.</p>
+    </div>
+    <a href="blog.html" class="view-all">Read Earning Guides →</a>
+  </div>
+  <div class="earn-grid reveal">
+    <div class="earn-card"><span class="earn-icon">✍️</span><div class="earn-title">AI Content Writing</div><p class="earn-desc">Use AI to write for clients 10x faster. Earn $500–$2000/month as a freelance AI writer.</p></div>
+    <div class="earn-card"><span class="earn-icon">🎨</span><div class="earn-title">AI Design Services</div><p class="earn-desc">Sell logos, social kits, and brand designs using Canva AI. No design degree needed.</p></div>
+    <div class="earn-card"><span class="earn-icon">🎬</span><div class="earn-title">AI Video Creation</div><p class="earn-desc">Create faceless YouTube videos and sell video services. Passive income from day one.</p></div>
+    <div class="earn-card"><span class="earn-icon">🤝</span><div class="earn-title">Affiliate Marketing</div><p class="earn-desc">Earn 25–45% recurring commissions promoting AI tools you already use and love.</p></div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="reveal" style="max-width:560px;margin:0 auto">
+    <span class="nl-icon">📬</span>
+    <h2>Get Weekly AI Tool Updates</h2>
+    <p>Join 5,000+ creators who get our weekly picks of the best new AI tools, tutorials, and earning opportunities.</p>
+    <form class="nl-form" onsubmit="handleSub(event)">
+      <input type="email" placeholder="Enter your email address" required>
+      <button type="submit">Subscribe Free</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER (injected by components.js) -->
+<div id="footer"></div>
+
+<script src="components.js"></script>
+<script>
+  renderNav('Home');
+  renderFooter();
+
+  function handleSub(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button');
+    // NOTE: Connect this to Mailchimp/ConvertKit/etc. for real email collection
+    btn.textContent = '✓ Subscribed!';
+    btn.style.background = '#10b981';
+    setTimeout(() => { btn.textContent = 'Subscribe Free'; btn.style.background = ''; e.target.reset(); }, 3000);
+  }
+</script>
+</body>
+</html>
