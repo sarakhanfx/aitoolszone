@@ -1,0 +1,9 @@
+# robots.txt — AIToolsZone
+# https://sarakhanfx.github.io/aitoolszone/
+
+# Allow all search engines to crawl everything
+User-agent: *
+Allow: /
+
+# Sitemap location — tells Google exactly where to find it
+Sitemap: https://sarakhanfx.github.io/aitoolszone/sitemap.xml
