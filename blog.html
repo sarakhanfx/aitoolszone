@@ -28,13 +28,10 @@
   font-size: .84rem; outline: none; width: 190px;
 }
 .search-box input::placeholder { color: var(--muted); }
-
 .blog-layout {
   display: grid; grid-template-columns: 1fr 310px; gap: 40px;
   max-width: 1200px; margin: 0 auto; padding: 50px 5%;
 }
-
-/* Horizontal article card */
 .article-h {
   background: var(--card); border: 1px solid var(--border);
   border-radius: 16px; overflow: hidden; text-decoration: none;
@@ -47,42 +44,29 @@
 .article-h .excerpt { font-size: .84rem; color: var(--muted); line-height: 1.7; font-weight: 300; flex: 1; margin-bottom: 14px; }
 .article-h .meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
 .article-h .footer { display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--border); }
-
-/* SIDEBAR */
 .sidebar { display: flex; flex-direction: column; gap: 20px; }
 .sidebar-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 22px; }
 .sidebar-title { font-family: var(--font-head); font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; margin-bottom: 16px; color: var(--muted); }
-
 .popular-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
 .popular-list li { display: flex; gap: 10px; align-items: flex-start; }
 .pop-num { font-family: var(--font-head); font-size: 1.1rem; font-weight: 800; color: var(--border); min-width: 24px; line-height: 1.4; }
 .pop-title { font-size: .83rem; color: var(--text); font-weight: 500; text-decoration: none; line-height: 1.4; transition: color .2s; }
 .pop-title:hover { color: var(--accent); }
-
 .cat-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
-.cat-list li a {
-  display: flex; justify-content: space-between; align-items: center;
-  color: var(--muted); text-decoration: none; font-size: .83rem;
-  padding: 8px 10px; border-radius: 8px; transition: all .2s; font-weight: 300;
-}
+.cat-list li a { display: flex; justify-content: space-between; align-items: center; color: var(--muted); text-decoration: none; font-size: .83rem; padding: 8px 10px; border-radius: 8px; transition: all .2s; font-weight: 300; }
 .cat-list li a:hover { background: rgba(0,229,255,.06); color: var(--accent); }
 .cat-count { background: rgba(255,255,255,.05); padding: 2px 8px; border-radius: 100px; font-size: .68rem; }
-
 .spotlight-card { background: linear-gradient(135deg, rgba(0,229,255,.05), rgba(124,58,237,.05)); border-color: rgba(0,229,255,.14) !important; }
 .spot-hd { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
 .spot-icon { font-size: 1.8rem; width: 50px; height: 50px; background: rgba(255,255,255,.04); border-radius: 12px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border); }
 .spot-name { font-family: var(--font-head); font-size: .98rem; font-weight: 700; }
 .spot-cat { font-size: .73rem; color: var(--muted); }
 .spot-desc { font-size: .82rem; color: var(--muted); line-height: 1.6; margin-bottom: 14px; font-weight: 300; }
-
 .pagination { display: flex; justify-content: center; align-items: center; gap: 8px; padding: 36px 5%; flex-wrap: wrap; }
 .pg-btn { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: var(--card); border: 1px solid var(--border); color: var(--muted); border-radius: 8px; cursor: pointer; font-size: .84rem; text-decoration: none; transition: all .2s; }
 .pg-btn:hover, .pg-btn.active { background: var(--accent); color: #000; border-color: var(--accent); }
-
 .articles-list { display: flex; flex-direction: column; gap: 18px; }
-
 #noResults { display: none; color: var(--muted); text-align: center; padding: 48px; font-size: .95rem; }
-
 @media (max-width: 960px) {
   .blog-layout { grid-template-columns: 1fr; }
   .sidebar { display: none; }
@@ -97,7 +81,6 @@
   .filter-bar { gap: 6px; }
 }
 </style>
-
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
 </head>
 <body>
@@ -131,6 +114,7 @@
     <div>
       <div class="articles-list" id="artList">
 
+        <!-- ARTICLE 1 -->
         <a href="ai-agents-2026.html" class="article-h" data-cat="review free">
           <div class="thumb">🤖⚡</div>
           <div class="body">
@@ -144,85 +128,77 @@
           </div>
         </a>
 
-        <a href="free-ai-tools-beginners.html" class="article-h" data-cat="free review">
-          <div class="thumb">🤖✨</div>
-          <div class="body">
-            <div class="meta"><span class="tag">Free Tools</span><span class="tag tag-green">Beginners</span><span class="read-time">⏱ 7 min</span></div>
-            <div class="title">5 Best Free AI Tools for Beginners in 2025</div>
-            <p class="excerpt">Shuruat karne ke liye ek paisa bhi nahi lagta. Yeh 5 free AI tools beginners ke liye perfect hain — ChatGPT se Canva AI tak, sab tested aur ranked.</p>
-            <div class="footer">
-              <div class="author"><div class="avatar">AZ</div><span class="author-name">AIToolsZone Team</span></div>
-              <span class="date">Apr 23, 2025</span>
-            </div>
-          </div>
-        </a>
-
+        <!-- ARTICLE 2 -->
         <a href="earn-with-claude-ai.html" class="article-h" data-cat="earn writing">
-          <div class="thumb">🤖💰</div>
+          <div class="thumb">💰✨</div>
           <div class="body">
-            <div class="meta"><span class="tag tag-green">Earn with AI</span><span class="read-time">⏱ 10 min</span></div>
-            <div class="title">How to Earn Money with Claude AI in 2025 — 7 Real Strategies</div>
-            <p class="excerpt">Claude AI is one of the most underrated money-making tools available. Here are 7 proven ways freelancers are earning $500–$3,000/month using it.</p>
+            <div class="meta"><span class="tag tag-green">Earn with AI</span><span class="tag tag-purple">Updated 2026</span><span class="read-time">⏱ 10 min</span></div>
+            <div class="title">How to Earn Money with Claude AI in 2026 — 7 Real Strategies That Actually Work</div>
+            <p class="excerpt">7 proven ways freelancers are earning $500–$3,000/month with Claude AI in 2026. No hype — content writing, digital products, coding services and more.</p>
             <div class="footer">
               <div class="author"><div class="avatar">AZ</div><span class="author-name">AIToolsZone Team</span></div>
-              <span class="date">Apr 2025</span>
+              <span class="date">Apr 26, 2026</span>
             </div>
           </div>
         </a>
 
+        <!-- ARTICLE 3 -->
+        <a href="free-ai-tools-beginners.html" class="article-h" data-cat="free review">
+          <div class="thumb">🆓🚀</div>
+          <div class="body">
+            <div class="meta"><span class="tag">Free Tools</span><span class="tag tag-green">Beginners</span><span class="read-time">⏱ 9 min</span></div>
+            <div class="title">10 Best Free AI Tools for Beginners in 2026 — No Credit Card Needed</div>
+            <p class="excerpt">No credit card needed. Start using ChatGPT, Claude, Canva AI, Perplexity and more — completely free in 2026. Every tool tested and ranked for beginners.</p>
+            <div class="footer">
+              <div class="author"><div class="avatar">AZ</div><span class="author-name">AIToolsZone Team</span></div>
+              <span class="date">Apr 27, 2026</span>
+            </div>
+          </div>
+        </a>
 
+        <!-- ARTICLE 4 -->
         <a href="best-ai-writing-tools.html" class="article-h" data-cat="review writing">
           <div class="thumb">🤖</div>
           <div class="body">
             <div class="meta"><span class="tag">AI Writing</span><span class="read-time">⏱ 8 min</span></div>
-            <div class="title">7 Best AI Writing Tools for Freelancers in 2025 (Free & Paid)</div>
+            <div class="title">7 Best AI Writing Tools for Freelancers in 2026 (Free & Paid)</div>
             <p class="excerpt">Tired of spending hours writing? These AI tools produce high-quality blog posts, emails, and social media content in minutes.</p>
             <div class="footer">
               <div class="author"><div class="avatar">AZ</div><span class="author-name">AIToolsZone Team</span></div>
-              <span class="date">Jan 15, 2025</span>
+              <span class="date">Jan 15, 2026</span>
             </div>
           </div>
         </a>
 
+        <!-- ARTICLE 5 -->
         <a href="writesonic-vs-jasper.html" class="article-h" data-cat="comparison writing">
           <div class="thumb">⚔️</div>
           <div class="body">
             <div class="meta"><span class="tag">Comparison</span><span class="read-time">⏱ 6 min</span></div>
-            <div class="title">Writesonic vs Jasper AI: Which is Better for Blog Writers in 2025?</div>
+            <div class="title">Writesonic vs Jasper AI: Which is Better for Blog Writers in 2026?</div>
             <p class="excerpt">We tested both tools for 30 days on real blog content. Here's the honest verdict on which one gives better results.</p>
             <div class="footer">
               <div class="author"><div class="avatar">AZ</div><span class="author-name">AIToolsZone Team</span></div>
-              <span class="date">Jan 12, 2025</span>
+              <span class="date">Jan 12, 2026</span>
             </div>
           </div>
         </a>
 
-        <a href="earn-with-claude-ai.html" class="article-h" data-cat="earn">
-          <div class="thumb">💰</div>
-          <div class="body">
-            <div class="meta"><span class="tag tag-green">Earn with AI</span><span class="read-time">⏱ 7 min</span></div>
-            <div class="title">How to Make $500/Month Using AI Tools as a Freelancer (Beginner Guide)</div>
-            <p class="excerpt">Real strategies that freelancers are using right now to earn consistent income with AI-powered services.</p>
-            <div class="footer">
-              <div class="author"><div class="avatar">AZ</div><span class="author-name">AIToolsZone Team</span></div>
-              <span class="date">Jan 10, 2025</span>
-            </div>
-          </div>
-        </a>
-
+        <!-- ARTICLE 6 -->
         <a href="free-ai-image-generators.html" class="article-h" data-cat="review free image">
           <div class="thumb">🎨</div>
           <div class="body">
             <div class="meta"><span class="tag tag-purple">AI Image</span><span class="read-time">⏱ 5 min</span></div>
-            <div class="title">Best Free AI Image Generators in 2025 — Tested & Ranked</div>
+            <div class="title">Best Free AI Image Generators in 2026 — Tested & Ranked</div>
             <p class="excerpt">We tested 10 free AI image generators to find which ones produce professional-quality images without paying anything.</p>
             <div class="footer">
               <div class="author"><div class="avatar">AZ</div><span class="author-name">AIToolsZone Team</span></div>
-              <span class="date">Jan 8, 2025</span>
+              <span class="date">Jan 8, 2026</span>
             </div>
           </div>
         </a>
 
+        <!-- ARTICLE 7 -->
         <a href="canva-ai-tutorial.html" class="article-h" data-cat="tutorial">
           <div class="thumb">📱</div>
           <div class="body">
@@ -231,20 +207,21 @@
             <p class="excerpt">Step-by-step guide to Canva's AI features for stunning social media graphics — even with zero design experience.</p>
             <div class="footer">
               <div class="author"><div class="avatar">AZ</div><span class="author-name">AIToolsZone Team</span></div>
-              <span class="date">Jan 5, 2025</span>
+              <span class="date">Jan 5, 2026</span>
             </div>
           </div>
         </a>
 
+        <!-- ARTICLE 8 -->
         <a href="copyai-review.html" class="article-h" data-cat="review">
           <div class="thumb">📝</div>
           <div class="body">
             <div class="meta"><span class="tag">Review</span><span class="read-time">⏱ 6 min</span></div>
-            <div class="title">Copy.ai Review 2025: Is the Free Plan Actually Worth Using?</div>
+            <div class="title">Copy.ai Review 2026: Is the Free Plan Actually Worth Using?</div>
             <p class="excerpt">Copy.ai promises a free-forever plan. We spent 2 weeks testing it to find out if it's genuinely useful for freelancers.</p>
             <div class="footer">
               <div class="author"><div class="avatar">AZ</div><span class="author-name">AIToolsZone Team</span></div>
-              <span class="date">Jan 3, 2025</span>
+              <span class="date">Jan 3, 2026</span>
             </div>
           </div>
         </a>
@@ -252,7 +229,6 @@
       </div>
       <div id="noResults">😕 No articles found. Try a different search.</div>
 
-      <!-- NOTE: Pagination is UI placeholder — more articles coming soon -->
       <div class="pagination">
         <a href="#" class="pg-btn active">1</a>
         <a href="#" class="pg-btn" onclick="alert('More articles coming soon!');return false;">2</a>
@@ -270,27 +246,27 @@
           <div><div class="spot-name">Jasper AI</div><div class="spot-cat">AI Writing Tool</div></div>
         </div>
         <p class="spot-desc">The most powerful AI writer for blogs, ads, and emails. 100,000+ marketers trust it daily.</p>
-        <a href="article.html" class="btn btn-primary" style="width:100%;justify-content:center">Read Full Review →</a>
+        <a href="resources.html" class="btn btn-primary" style="width:100%;justify-content:center">View All Tools →</a>
       </div>
       <div class="sidebar-card">
         <div class="sidebar-title">📈 Popular Articles</div>
         <ul class="popular-list">
-          <li><span class="pop-num">01</span><a href="article.html" class="pop-title">7 Best AI Writing Tools for Freelancers</a></li>
-          <li><span class="pop-num">02</span><a href="article.html" class="pop-title">Writesonic vs Jasper — Full Comparison</a></li>
-          <li><span class="pop-num">03</span><a href="article.html" class="pop-title">How to Make $500/Month with AI</a></li>
-          <li><span class="pop-num">04</span><a href="article.html" class="pop-title">Best Free AI Image Generators 2025</a></li>
-          <li><span class="pop-num">05</span><a href="article.html" class="pop-title">ChatGPT vs Claude: Which is Better?</a></li>
+          <li><span class="pop-num">01</span><a href="earn-with-claude-ai.html" class="pop-title">How to Earn with Claude AI 2026</a></li>
+          <li><span class="pop-num">02</span><a href="free-ai-tools-beginners.html" class="pop-title">10 Best Free AI Tools for Beginners</a></li>
+          <li><span class="pop-num">03</span><a href="writesonic-vs-jasper.html" class="pop-title">Writesonic vs Jasper — Full Comparison</a></li>
+          <li><span class="pop-num">04</span><a href="free-ai-image-generators.html" class="pop-title">Best Free AI Image Generators 2026</a></li>
+          <li><span class="pop-num">05</span><a href="ai-agents-2026.html" class="pop-title">AI Agents — 2026 Ka Bada Trend</a></li>
         </ul>
       </div>
       <div class="sidebar-card">
         <div class="sidebar-title">📂 Categories</div>
         <ul class="cat-list">
-          <li><a href="blog.html">✍️ AI Writing <span class="cat-count">24</span></a></li>
-          <li><a href="blog.html">🎨 AI Image <span class="cat-count">18</span></a></li>
-          <li><a href="blog.html">🆚 Comparisons <span class="cat-count">22</span></a></li>
-          <li><a href="blog.html">💰 Earn with AI <span class="cat-count">14</span></a></li>
-          <li><a href="blog.html">📚 Tutorials <span class="cat-count">20</span></a></li>
-          <li><a href="blog.html">🆓 Free Tools <span class="cat-count">30</span></a></li>
+          <li><a href="blog.html">✍️ AI Writing <span class="cat-count">4</span></a></li>
+          <li><a href="blog.html">🎨 AI Image <span class="cat-count">1</span></a></li>
+          <li><a href="blog.html">🆚 Comparisons <span class="cat-count">1</span></a></li>
+          <li><a href="blog.html">💰 Earn with AI <span class="cat-count">2</span></a></li>
+          <li><a href="blog.html">📚 Tutorials <span class="cat-count">1</span></a></li>
+          <li><a href="blog.html">🆓 Free Tools <span class="cat-count">2</span></a></li>
         </ul>
       </div>
     </aside>
@@ -320,13 +296,11 @@
 
   function searchArt(val) {
     const q = val.toLowerCase().trim();
-    // Reset all filter buttons when searching
     if (q) {
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     }
     let shown = 0;
     document.querySelectorAll('.article-h').forEach(card => {
-      // FIX: Search in title, excerpt, AND tags — not just title
       const title = (card.querySelector('.title') || {}).textContent || '';
       const excerpt = (card.querySelector('.excerpt') || {}).textContent || '';
       const tags = (card.querySelector('.meta') || {}).textContent || '';
