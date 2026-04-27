@@ -1,118 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- ===== MAIN PAGES ===== -->
   <url>
     <loc>https://sarakhanfx.github.io/aitoolszone/index.html</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
     <loc>https://sarakhanfx.github.io/aitoolszone/blog.html</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://sarakhanfx.github.io/aitoolszone/resources.html</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://sarakhanfx.github.io/aitoolszone/about.html</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
   <url>
     <loc>https://sarakhanfx.github.io/aitoolszone/contact.html</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-
   <url>
     <loc>https://sarakhanfx.github.io/aitoolszone/privacy.html</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
-
   <url>
     <loc>https://sarakhanfx.github.io/aitoolszone/disclaimer.html</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
-
   <url>
     <loc>https://sarakhanfx.github.io/aitoolszone/disclosure.html</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
-
-  <!-- ===== ARTICLE PAGES ===== -->
-  <url>
-    <loc>https://sarakhanfx.github.io/aitoolszone/best-ai-writing-tools.html</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://sarakhanfx.github.io/aitoolszone/writesonic-vs-jasper.html</loc>
-    <lastmod>2025-01-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://sarakhanfx.github.io/aitoolszone/free-ai-image-generators.html</loc>
-    <lastmod>2025-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
   <url>
     <loc>https://sarakhanfx.github.io/aitoolszone/earn-with-claude-ai.html</loc>
-    <lastmod>2025-04-01</lastmod>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://sarakhanfx.github.io/aitoolszone/best-ai-writing-tools.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sarakhanfx.github.io/aitoolszone/writesonic-vs-jasper.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sarakhanfx.github.io/aitoolszone/free-ai-image-generators.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://sarakhanfx.github.io/aitoolszone/canva-ai-tutorial.html</loc>
-    <lastmod>2025-01-05</lastmod>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://sarakhanfx.github.io/aitoolszone/copyai-review.html</loc>
-    <lastmod>2025-01-03</lastmod>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://sarakhanfx.github.io/aitoolszone/free-ai-tools-beginners.html</loc>
-    <lastmod>2025-04-23</lastmod>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://sarakhanfx.github.io/aitoolszone/ai-agents-2026.html</loc>
-    <lastmod>2026-04-23</lastmod>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
 </urlset>
